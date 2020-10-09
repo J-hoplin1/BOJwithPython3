@@ -1,4 +1,3 @@
-# Baekjoon
+# Problem Solving
 ***
-- 주로 Python3를 이용해서 문제를 풉니다.
-- 계정 : hoplin (홍익대학교)
+- 알고리즘, 자료구조 문제풀이 및 
