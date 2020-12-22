@@ -4,6 +4,9 @@ from collections import deque
 '''
 collections.deque의 주요 속성 및 함수
 
+deque()의 기본적인 parameter : deque([#deque 초기화], 최대 저장개수(maxlen))
+
+
 maxlen 속성 : deque의 최대 크기를 나타내는 속성으로 읽기 전용이다, 크기제한이 없으면 none이 된다.
 append(x) : deque의 맨 끝에 x를 추가한다.
 appendleft(x) : deque의 맨 앞(왼쪽)에 x를 추가한다.
