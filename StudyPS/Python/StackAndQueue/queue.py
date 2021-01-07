@@ -1,8 +1,10 @@
 from typing import Any
 
+#Round Queue with using list data structure
+
 class FixedQueue(object):
 
-    class Empty(Exception):
+    class Empty(Exception): # 파이썬 예외 클래스를 만들기 위해서는 파이썬의 Exception클래스를 상속받아야 만들 수 있다.
         pass
         #큐가 비었을 경우 예외 클래스
     
@@ -29,7 +31,7 @@ class FixedQueue(object):
     def enque(self, data: Any) -> None:
         if self.is_full():
             raise FixedQueue.Full
-        self.que[self.rear] = data
+        self.queue[self.rear] = data
         self.rear += 1
         self.dataAmount += 1
         if self.rear ==self.capacity: #rear의 logic index number가 전체 큐 용량과 같아지게 된다면 rear의 logic index number 을 0으로 초기화 한다.(배열 index한계를 넘게되므로)
@@ -48,12 +50,12 @@ class FixedQueue(object):
     def peek(self) -> Any:
         if self.is_empty():
             raise FixedQueue.Empty
-        return self.que([self.front])
+        return self.queue[self.front]
     
     def find(self, data) -> Any:
         for e in range(self.dataAmount):
             ix = (e + self.front) % self.capacity # front의 인덱스는 0이 아닐수도 있다.그렇기에 논리적 queue index의 front를 찾기 위해서는 논리 front index 에 값을 더한 후 전체 큐 용량을 나누어서 구해야 한다.
-            if self.que[ix] == value:
+            if self.queue[ix] == data:
                 return ix
         return -1
     
@@ -61,7 +63,7 @@ class FixedQueue(object):
         c = 0
         for e in range(self.dataAmount):
             ix = (e + self.front) % self.capacity
-            if self.que[ix] == data:
+            if self.queue[ix] == data:
                 c += 1
         return c
     
@@ -76,5 +78,5 @@ class FixedQueue(object):
             print("Queue is Empty")
         else:
             for e in range(self.dataAmount):
-                print(self.que[(e + self.front) % self.capacity], end = '')
+                print(self.queue[(e + self.front) % self.capacity], end = '')
             print()
