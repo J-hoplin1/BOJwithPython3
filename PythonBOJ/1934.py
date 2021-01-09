@@ -11,7 +11,9 @@ A,B의 최소공배수 구하기
 
 # 결론적으로 두 수의 최소 공배수는 두 수의 곱  // 최대 공약수
 def getGCD(a,b):
-    if b % a == 0:
+    if a == 0:
+        return b
+    elif b % a == 0:
         return a
     else:
         return getGCD(b%a,a)
