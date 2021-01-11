@@ -1,0 +1,80 @@
+from typing import Any
+from collections import deque
+import sys
+
+'''
+collections모듈에 있는 deque를 이용하여  queue를 구현해보자
+
+collections.deque의 특징은 내부적으로 doubly 링크드 리스트로 표현이 된다.
+양 끝 모두 접근이 가능하다. 하지만 deque의 가운데 부분 검색, 삽입, 제거는 느리다.
+
+collections.deque로 Queue를 구현하기 위해 사용하는 함수 및 메소드
+
+deque([],capacity) : deque객체를 초기화 한다
+append(x) : deque맨 오른쪽에 x 추가, enque구현시 사용
+popleft() : deque맨 왼쪽 값을 pop()
+
+
+'''
+
+class queue(object):
+
+    def __init__(self, capacity):
+        self.que = deque([],capacity) # collections.deque에도 일반 리스트와 같은 연산자 적용가능
+        self.capacity = capacity
+    
+    def empty(self):
+        if not self.que:
+            return 1 # 큐가 비어있지 않으면 0을 출력, 0의 bool타입은 False이므로
+        else:
+            return 0 # 큐가 비어있으면 1을 출력
+    
+    def push(self,data): # 큐에서 enque와 동일
+        self.que.append(data)
+    
+    def pop(self): #큐에서 deque와 동일
+        if not self.que:
+            return -1
+        else:
+            return self.que.popleft()
+        
+    
+    def size(self):
+        return len(self.que)
+    
+    def front(self):
+        if not self.que:
+            return -1
+        else:
+            return self.que[0]
+    
+    def back(self):
+        if not self.que:
+            return -1
+        else:
+            return self.que[-1]
+
+commandCount = int(sys.stdin.readline())
+
+q = queue(commandCount)
+result = []
+for i in range(commandCount):
+    buffer = sys.stdin.readline().split()
+    command = buffer[0]
+
+    if command == 'push':
+        q.push(int(buffer[1]))
+    elif command == 'pop':
+        dt = q.pop()
+        result.append(dt)
+    elif command == 'size':
+        result.append(q.size())
+    elif command == 'empty':
+        result.append(q.empty())
+    elif command == 'front':
+        result.append(q.front())
+    elif command == 'back':
+        result.append(q.back())
+
+for i in result:
+    print(i)
