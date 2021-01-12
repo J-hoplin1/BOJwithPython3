@@ -69,7 +69,7 @@ class queue(object):
         if self.isEmpty():
             raise queue.isEmpty
         else:
-            return self.que[-1]
+            return self.que[0]
     
     def count(self,searchData):
         self.que.count(searchData)
