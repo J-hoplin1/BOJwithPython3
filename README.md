@@ -11,4 +11,4 @@
 
 - [프로그래머스](https://programmers.co.kr/) : 기업 코딩테스트 대비
 
-- [코드포스](https://codeforces.com/) : 
+- [코드포스](https://codeforces.com/) : 대회   
