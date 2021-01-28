@@ -1,6 +1,6 @@
 from typing import Any
 from collections import deque
-# deque를 이용하여 문제를 푼다
+# 문제풀이 : https://github.com/J-hoplin1/Problem-Solving/blob/master/ProgrammersPython/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/%EB%8B%A4%EB%A6%AC%EB%A5%BC%20%EC%A7%80%EB%82%98%EB%8A%94%ED%8A%B8%EB%9F%AD.md
 
 class deq(object):
 
