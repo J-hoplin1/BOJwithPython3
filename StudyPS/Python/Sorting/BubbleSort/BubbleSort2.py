@@ -1,6 +1,6 @@
 from typing import MutableSequence
 
-# 교환 횟수에 따른 중단으로 불필요한 반복문 실행을 줄일 수 있다.
+# 알고리즘 개선법1 : 교환 횟수에 따른 중단으로 불필요한 반복문 실행을 줄일 수 있다.
 
 def bubble_sort(a : MutableSequence) -> None:
     n = len(a)
