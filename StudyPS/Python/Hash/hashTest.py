@@ -1,5 +1,5 @@
 from enum import Enum
-from hashTest import ChainedHash
+from hash import ChainedHash
 
 option = Enum('option',['추가','삭제','검색','출력','종료'])
 
