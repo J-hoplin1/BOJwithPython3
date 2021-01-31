@@ -9,6 +9,7 @@ __future__의 annotations는 foward reference가 가능하게 해주는 기능�
 이는 코드 순서상 정의되지않은 클래스 타입을 참조할 수 있게 해준다는 의미이다.
 이는 Python3.7부터 지원되는 기능이다.
 '''
+from __future__ import annotations   
 from typing import Any, Type
 import hashlib
 
