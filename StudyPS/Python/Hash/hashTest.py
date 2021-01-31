@@ -1,5 +1,5 @@
 from enum import Enum
-from a import ChainedHash
+from ChainingHash import ChainedHash
 
 option = Enum('option',['추가','삭제','검색','출력','종료']) # Enum('지정이름',[값들])
 
