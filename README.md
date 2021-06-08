@@ -3,6 +3,34 @@
 - 알고리즘, 자료구조 문제풀이 코드 올립니다
 
 - 실패란없다.
+
+- 주로 Python만 이용(전역하면 Java로 변경)
+
+- 파이썬 PS,Coding Test시 유용히 사용한 모듈들
+
+  - itertools
+
+  - heapq
+
+  - typing
+
+  - deque
+
+  - bisect
+
+  - hashlib
+
+  - collections
+
+  - zip
+
+  - sys
+
+  - math
+
+  - random
+
+  - time(알고리즘 벤치마킹시에만)
 ***
 ### 주로 이용하는 문제풀이 사이트
 
