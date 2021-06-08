@@ -12,7 +12,7 @@
 
   - heapq
 
-  - typing
+  - typing(반환 자료형 / 매개변수 자료형 표기 : 주로 리뷰를 위해 )
 
   - deque
 
